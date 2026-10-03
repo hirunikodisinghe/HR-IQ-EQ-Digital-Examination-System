@@ -1,0 +1,360 @@
+/* ==========================================
+   HOME PAGE
+========================================== */
+
+.exam-home-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f3f6fb;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.exam-home-header {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 14px 68px;
+  background: #111c35;
+}
+
+.exam-home-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.exam-home-logo {
+  width: 74px;
+  height: 58px;
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+.exam-home-brand h1 {
+  margin: 0 0 5px;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.exam-home-brand p {
+  margin: 0;
+  color: #c9d3e5;
+  font-size: 14px;
+}
+
+/* ==========================================
+   ERROR MESSAGE
+========================================== */
+
+.exam-home-error {
+  position: fixed;
+  top: 104px;
+  left: 50%;
+  z-index: 20;
+  width: min(720px, calc(100% - 40px));
+  padding: 13px 16px;
+  color: #a12626;
+  background: #fff0f0;
+  border: 1px solid #efbcbc;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(120, 25, 25, 0.12);
+  transform: translateX(-50%);
+}
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.exam-home-content {
+  width: min(1450px, calc(100% - 80px));
+  min-height: calc(100vh - 90px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.55fr)
+    minmax(360px, 0.75fr);
+  align-items: start;
+  gap: 70px;
+  padding: 30px 0 50px;
+}
+
+.exam-home-introduction {
+  max-width: 900px;
+}
+
+.exam-home-badge {
+  display: inline-flex;
+  padding: 10px 18px;
+  color: #1754d6;
+  background: #dce9ff;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.exam-home-introduction h2 {
+  margin: 24px 0 18px;
+  color: #111a30;
+  font-size: clamp(38px, 3.6vw, 58px);
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+.exam-home-introduction > p {
+  max-width: 830px;
+  margin: 0;
+  color: #43536d;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* ==========================================
+   EXAM FLOW
+========================================== */
+
+.exam-flow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.exam-flow-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 74px;
+  padding: 15px 16px;
+  background: #ffffff;
+  border: 1px solid #dbe3ef;
+  border-radius: 13px;
+  box-shadow: 0 7px 18px rgba(19, 40, 72, 0.05);
+}
+
+.exam-flow-item span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: #ffffff;
+  background: #2f67ed;
+  border-radius: 11px;
+  font-weight: 700;
+}
+
+.exam-flow-item strong {
+  color: #22324b;
+  font-size: 15px;
+}
+
+/* ==========================================
+   INFORMATION CARD
+========================================== */
+
+.exam-information-card {
+  max-height: calc(100vh - 140px);
+  padding: 30px;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 24px 55px rgba(22, 39, 72, 0.13);
+  scrollbar-width: none;
+}
+
+.exam-information-card::-webkit-scrollbar {
+  display: none;
+}
+
+.exam-paper-icon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: #2f67ed;
+  border-radius: 17px;
+  font-size: 31px;
+}
+
+.exam-information-card h3 {
+  margin: 20px 0 10px;
+  color: #10182c;
+  font-size: 27px;
+}
+
+.exam-information-card > p {
+  margin: 0;
+  color: #5d6d84;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   LOGIN FORM
+========================================== */
+
+.paper-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 22px 0 20px;
+}
+
+.paper-login-form label {
+  color: #22324b;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.paper-login-form input {
+  width: 100%;
+  padding: 13px 15px;
+  color: #17233b;
+  background: #ffffff;
+  border: 2px solid #d7dfea;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.paper-login-form input::placeholder {
+  color: #8490a3;
+}
+
+.paper-login-form input:focus {
+  border-color: #2f67ed;
+  box-shadow: 0 0 0 3px rgba(47, 103, 237, 0.15);
+}
+
+.paper-login-form button {
+  width: 100%;
+  margin-top: 4px;
+  padding: 13px 18px;
+  color: #ffffff;
+  background: #2f67ed;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.paper-login-form button:hover {
+  background: #2456cb;
+  transform: translateY(-1px);
+}
+
+/* ==========================================
+   INFORMATION LIST
+========================================== */
+
+.exam-information-list {
+  margin: 0;
+  padding-left: 22px;
+  color: #283850;
+}
+
+.exam-information-list li {
+  margin-bottom: 11px;
+  line-height: 1.45;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1050px) {
+  .exam-home-page {
+    min-height:100vh;
+}
+
+  .exam-home-header {
+    height: auto;
+    padding: 18px 28px;
+  }
+
+  .exam-home-content {
+    width: min(100% - 40px, 900px);
+    height: auto;
+    min-height: calc(100vh - 90px);
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 42px 0;
+    overflow: visible;
+  }
+
+  .exam-information-card {
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 680px) {
+  .exam-home-header {
+    padding: 15px 16px;
+  }
+
+  .exam-home-logo {
+    width: 60px;
+    height: 48px;
+  }
+
+  .exam-home-brand {
+    gap: 12px;
+  }
+
+  .exam-home-brand h1 {
+    font-size: 19px;
+  }
+
+  .exam-home-brand p {
+    font-size: 13px;
+  }
+
+  .exam-home-content {
+    width: min(100% - 28px, 900px);
+    padding: 32px 0;
+  }
+
+  .exam-home-introduction h2 {
+    font-size: 36px;
+  }
+
+  .exam-home-introduction > p {
+    font-size: 16px;
+  }
+
+  .exam-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .exam-information-card {
+    padding: 24px;
+    border-radius: 18px;
+  }
+
+  .exam-paper-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 28px;
+  }
+
+  .exam-home-error {
+    top: 90px;
+  }
+}

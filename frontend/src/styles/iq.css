@@ -1,0 +1,391 @@
+/* ==========================================
+   IQ EXAM PAGE
+========================================== */
+
+.iq-exam-page,
+.iq-status-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    #edf2fb 0%,
+    #f7f9fd 100%
+  );
+}
+
+.iq-status-page {
+  display: grid;
+  place-items: center;
+}
+
+.iq-status-card {
+  padding: 30px 40px;
+  color: #17233b;
+  background: #ffffff;
+  border: 1px solid #d7e0ed;
+  border-radius: 16px;
+  box-shadow: 0 18px 45px rgba(22, 39, 72, 0.12);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* ==========================================
+   EXAM CONTAINER
+========================================== */
+
+.iq-exam-shell {
+  width: min(100%, 950px);
+  margin: 0 auto;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #cfd8e6;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(22, 39, 72, 0.12);
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.iq-exam-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 24px;
+  color: #ffffff;
+  background: #111c35;
+}
+
+.iq-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iq-brand img {
+  width: 68px;
+  height: 52px;
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 7px;
+}
+
+.iq-brand h1 {
+  margin: 0 0 5px;
+  color: #ffffff;
+  font-size: 23px;
+}
+
+.iq-brand p {
+  margin: 0;
+  color: #c7d2e6;
+  font-size: 14px;
+}
+
+.iq-answer-count {
+  padding: 9px 13px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   PROGRESS BAR
+========================================== */
+
+.iq-progress-track {
+  width: 100%;
+  height: 8px;
+  overflow: hidden;
+  background: #dce4f2;
+}
+
+.iq-progress-value {
+  height: 100%;
+  background: #2f67ed;
+  transition: width 0.25s ease;
+}
+
+/* ==========================================
+   QUESTION CARD
+========================================== */
+
+.iq-question-card {
+  min-height: 470px;
+  padding: 28px;
+}
+
+.iq-question-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: #65748a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.iq-question-label {
+  color: #2f67ed;
+}
+
+.iq-question-card h2 {
+  margin: 20px 0 24px;
+  color: #17233b;
+  font-size: 25px;
+  line-height: 1.45;
+}
+
+/* ==========================================
+   QUESTION IMAGE
+========================================== */
+
+.iq-question-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 18px 0 24px;
+}
+
+.iq-question-image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 310px;
+  object-fit: contain;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #dbe3ef;
+  border-radius: 12px;
+}
+
+/* ==========================================
+   OPTIONS
+========================================== */
+
+.iq-options {
+  display: grid;
+  gap: 12px;
+}
+
+.iq-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: #ffffff;
+  border: 1px solid #cfd8e6;
+  border-radius: 12px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.iq-option:hover {
+  border-color: #86a7f4;
+  transform: translateY(-1px);
+}
+
+.iq-option.selected {
+  background: #eef3ff;
+  border-color: #2f67ed;
+}
+
+.iq-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.iq-option-letter {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: #ffffff;
+  background: #7589a5;
+  border-radius: 9px;
+  font-weight: 700;
+}
+
+.iq-option.selected .iq-option-letter {
+  background: #2f67ed;
+}
+
+.iq-option-text {
+  color: #24334c;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.iq-error {
+  margin-top: 18px;
+  padding: 11px 13px;
+  color: #a12626;
+  background: #fff0f0;
+  border: 1px solid #efbcbc;
+  border-radius: 9px;
+  font-size: 14px;
+}
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.iq-navigation {
+  display: grid;
+  grid-template-columns:
+    minmax(130px, auto)
+    1fr
+    minmax(130px, auto);
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  border-top: 1px solid #e1e7ef;
+}
+
+.iq-navigation > button {
+  min-height: 42px;
+  padding: 0 20px;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.iq-navigation > button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.iq-secondary-button {
+  background: #7589a5;
+}
+
+.iq-primary-button {
+  background: #2f67ed;
+}
+
+.iq-submit-button {
+  background: #168653;
+}
+
+.iq-navigation > button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   QUESTION NAVIGATOR
+========================================== */
+
+.iq-question-dots {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.iq-question-dot {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  color: #526176;
+  background: #ffffff;
+  border: 1px solid #cfd8e6;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.iq-question-dot.answered {
+  color: #ffffff;
+  background: #7ea1f3;
+  border-color: #7ea1f3;
+}
+
+.iq-question-dot.active {
+  color: #ffffff;
+  background: #2f67ed;
+  border-color: #2f67ed;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 680px) {
+  .iq-exam-page {
+    padding: 8px;
+  }
+
+  .iq-exam-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .iq-brand {
+    align-items: flex-start;
+  }
+
+  .iq-brand img {
+    width: 58px;
+    height: 46px;
+  }
+
+  .iq-brand h1 {
+    font-size: 19px;
+  }
+
+  .iq-question-card {
+    min-height: auto;
+    padding: 20px 16px;
+  }
+
+  .iq-question-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .iq-question-card h2 {
+    font-size: 20px;
+  }
+
+  .iq-question-image {
+    max-height: 230px;
+  }
+
+  .iq-option {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .iq-navigation {
+    grid-template-columns: 1fr;
+  }
+
+  .iq-question-dots {
+    order: -1;
+  }
+
+  .iq-navigation > button {
+    width: 100%;
+  }
+}

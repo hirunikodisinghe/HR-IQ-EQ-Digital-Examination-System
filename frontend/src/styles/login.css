@@ -1,0 +1,123 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    linear-gradient(
+      135deg,
+      var(--navy-900) 0%,
+      var(--navy-800) 100%
+    );
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 42px;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+}
+
+.login-brand {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.login-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 18px;
+}
+
+.login-brand h1 {
+  margin: 0 0 10px;
+  color: var(--text-dark);
+  font-size: 30px;
+}
+
+.login-brand p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-field input {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+  color: var(--text-dark);
+  background: var(--white);
+}
+
+.login-field input::placeholder {
+  color: #7a879b;
+}
+
+.login-field input:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(47, 102, 233, 0.14);
+}
+
+.login-button {
+  margin-top: 2px;
+  padding: 14px 18px;
+  color: var(--white);
+  background: var(--primary-blue);
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.login-button:hover {
+  background: var(--primary-blue-hover);
+}
+
+.back-button {
+  padding: 14px 18px;
+  color: var(--white);
+  background: var(--secondary-blue-grey);
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.back-button:hover {
+  background: var(--secondary-blue-grey-hover);
+}
+
+.login-error {
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  color: var(--error-text);
+  background: var(--error-bg);
+  border: 1px solid #efbcbc;
+  border-radius: 10px;
+}
+
+.login-note {
+  margin: 20px 0 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+@media (max-width: 520px) {
+  .login-card {
+    padding: 30px 24px;
+  }
+
+  .login-brand h1 {
+    font-size: 25px;
+  }
+}
